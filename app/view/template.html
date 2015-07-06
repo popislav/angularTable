@@ -1,0 +1,47 @@
+<div id="content">
+				
+			<div class="col" id="buttons">
+				<div id="tbCont">
+					<input ng-model="query" type="search" placeholder="Find" results/>
+				</div>
+
+					<ul>
+						<li ng-repeat="product in products | filter:query">
+							<a ng-href="#/{{product.imn | encodeURI}}">{{product.name}}</a>
+						</li>
+					</ul>
+
+			</div>
+				
+			<div class="col" id="table">
+				<table id="myTable">
+					<tbody>
+					<tr>
+						<td class="label">Name:</td>
+						<td class="detail">{{product.name}}</td>
+					</tr>
+					<tr>
+						<td class="label">Manufacturer:</td>
+						<td class="detail">{{product.manufacturer}}</td>
+					</tr>
+					<tr>
+						<td class="label">Price:</td>
+						<td class="detail">{{product.price | currency}}</td>
+					</tr>
+					<tr>
+						<td class="label">In-stock:</td>
+						<td class="detail">{{product.in_stock | number}}</td>
+					</tr>
+					<tr>
+						<td class="label">Item model number:</td>
+						<td class="detail">{{product.imn}}</td>
+					</tr>
+					<tr>
+						<td class="label">Description:</td>
+						<td class="detail">{{product.description}}</td>
+					</tr>
+					</tbody>
+				</table>				
+			</div>
+
+</div>

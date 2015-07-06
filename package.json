@@ -1,0 +1,11 @@
+{
+  "name": "node-authentication",
+  "main": "server.js",
+  "dependencies": {
+    "express": "*",
+	"angular": "*",
+	"angular-route": "*",
+	"jquery": "*"
+
+  }
+}
